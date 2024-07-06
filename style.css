@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-main: "Work Sans", sans-serif;
+    
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Light-pink);
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+main {
+    width: 335px;
+    background-color: var(--White);
+    margin: 130px auto 80px;
+    border-radius: 12px;
+    padding: 24px 28px;
+}
+main h1 {
+    display: flex;
+    font-weight: 700;
+    color: var(--Dark-purple);
+    margin-bottom: 30px;
+    & img {
+        width: 28px;
+        margin-right: 24px;
+    }
+}
+main .accordion .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+main .accordion .heading::after {
+    content: url(./assets/images/icon-plus.svg);
+}
+main .accordion .heading h4 {
+    color: var(--Dark-purple);
+    padding-right: 38px;
+}
+main .accordion .content {
+    color: var(--Grayish-purple);
+    height: 0;
+    overflow: hidden;
+}
+hr {
+    opacity: 25%;
+    margin: 24px 0;
+}
+
+footer {
+    font-size: 12px;
+    width: fit-content;
+    margin: 0 auto 4px;
+    color: var(--Grayish-purple);
+    & a {
+        color: var(--Dark-purple);
+    }
+    & a:hover {
+        font-weight: 700;
+        background: linear-gradient(rgb(195, 0, 255),rgb(23, 1, 41));
+        background-clip: text;
+        color: transparent; 
+    }
+}
