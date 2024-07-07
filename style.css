@@ -21,6 +21,9 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
 }
+
+/*--------------- MOBILE DESIGN --------*/
+
 main {
     width: 335px;
     background-color: var(--White);
@@ -51,14 +54,30 @@ main .accordion .heading h4 {
     color: var(--Dark-purple);
     padding-right: 38px;
 }
+main .accordion .heading h4:hover {
+    color: rgb(219, 50, 219);
+    font-weight: 800;
+}
 main .accordion .content {
     color: var(--Grayish-purple);
     height: 0;
     overflow: hidden;
+    transition: height 0.3s ease;
 }
 hr {
     opacity: 25%;
     margin: 24px 0;
+}
+main .accordion.activo .content {
+ height: 165px;
+ margin: 12px 0;
+}
+main .accordion.activo .heading::after {
+    content: url(./assets/images/icon-minus.svg);
+}
+main .accordion.activo .heading h4 {
+    color: rgb(219, 50, 219);
+    font-weight: 800;
 }
 
 footer {
@@ -74,5 +93,32 @@ footer {
         background: linear-gradient(rgb(195, 0, 255),rgb(23, 1, 41));
         background-clip: text;
         color: transparent; 
+    }
+}
+
+@media (min-width: 500px) {
+    body {
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+    }
+    main {
+        width: 600px;
+        & h1 {
+            font-size: 50px;
+            & img {
+                width: 32px;
+            }
+        }
+    }
+    main .accordion .heading h4 {
+        padding-right: 0;
+    }
+    hr {
+        margin: 16px 0;
+    }
+    main .accordion.activo .content {
+        height: 105px;
+    }
+    footer {
+        font-size: 14px;
     }
 }
